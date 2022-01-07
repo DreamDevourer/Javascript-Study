@@ -30,6 +30,7 @@
 <li><a href="#math">Math Scripts</a></li>
 <li><a href="#problemSolving">Problem Solving Scripts</a></li>
 <li><a href="#string">String Based Scripts</a></li>
+<li><a href="#web">Web Based Scripts</a></li>
 </ol>
 
 <h4 id="conversion">2. Conversion Scripts</h4>
@@ -42,6 +43,9 @@
 <p>These scripts are daily general problem solving scripts, like an investment calculator, a salary bonus calculation, price per quantity, etc.</p>
 
 <h4 id="string">5. String Based Scripts</h4>
+<p>Simple and direct strings scripts with minimal interaction with the user.</p>
+
+<h4 id="web">6. Web Based Scripts</h4>
 <p>Simple and direct strings scripts with minimal interaction with the user.</p>
 
 ## 💡 Useful Snippets and study pieces
