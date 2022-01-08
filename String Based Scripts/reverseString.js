@@ -1,4 +1,4 @@
-let simpleString = "Lorem ipsum dolor sit"
+let simpleString = "Lorem ipsum dolor sit";
 
 // Reverser string.
 let reverseString = simpleString.split("").reverse().join("");
