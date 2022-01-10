@@ -86,6 +86,16 @@ console.log(str);
 
 ```
 
+```javascript
+
+// For those who like to use f-strings in Python:
+let str = "String";
+let num = 10.5;
+
+console.log(`Look at that! We have ${str} AND ${num} in the same log.`);
+
+```
+
 <h3>If Statement</h3>
 <p>Very often when you write code, you want to perform different actions for different decisions.</p>
 
