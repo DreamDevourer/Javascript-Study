@@ -61,7 +61,29 @@ EXAMPLE:
 DIGITS SUM: 1 + 1 + 3 + 3 + 1 + 4 + 3 + 9 + 0 + 3 + 5 = 33 => Is valid.
 */
 
+// WARNING: Disable in production!
+debugMode = true;
 
+if (debugMode) {
+    cpfVal = "113.314.390-35";
+    console.log(validateCPF(cpfVal));
+}
+
+
+/******************************************************************************
+    Function: sum(<x>){
+    Params:
+    - arr: value to sum
+    Return: number
+    Desc: This is something equivalent to Python sum()
+******************************************************************************/
+function sum(arr) {
+    var result = 0, n = arr.length || 0; //may use >>> 0 to ensure length is Uint32
+    while (n--) {
+        result += +arr[n]; // unary operator to ensure ToNumber conversion
+    }
+    return result;
+}
 
 
 /******************************************************************************
@@ -71,18 +93,10 @@ DIGITS SUM: 1 + 1 + 3 + 3 + 1 + 4 + 3 + 9 + 0 + 3 + 5 = 33 => Is valid.
     Return: boolean
     Desc: If true, then the CPF is valid.
 ******************************************************************************/
-
-// WARNING: Disable in production!
-debugMode = false;
-
-if (debugMode) {
-    cpfVal = "113.314.390-35";
-    console.log(verificarCPF(cpfVal));
-}
-
-function verificarCPF(cpf) {
+function validateCPF(cpf) {
     // Regular expression to remove all non-digits, including dots, dashes and spaces.
     cpf = cpf.replace(/\D/g, "");
+    cpfComplete = cpf;
 
     if (cpf.length != 11) {
         return false;
@@ -95,6 +109,16 @@ function verificarCPF(cpf) {
     var digitOne = 0;
 
     var valid = false;
+
+    // Sum each digit in cpf.
+    sumAll = sum(cpfComplete);
+    //console.log(`Original: ${cpfComplete}\nSum of all digits: ${sumAll}`);
+
+    if (sumAll[0] == sumAll[1]) {
+        //valid = true;
+        console.log("CPF partially valid.");
+    }
+
     for (i = 0; i < 9; i++) {
         digitOne += cpf.charAt(i) * (10 - i);
     }
