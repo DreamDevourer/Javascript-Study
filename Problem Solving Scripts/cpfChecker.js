@@ -2,7 +2,7 @@
 Based on https://www.alura.com.br/conteudo/python-validacao-dados#:~:text=Criando%20um%20novo%20Python%20file,contr%C3%A1rio%20o%20retorno%20ser%C3%A1%20False%20
 
 Algorithm for validating CPF
-The CPF calculation is based on the final 2 digitcpfContainer.
+The CPF calculation is based on the final 2.
 To validate, take the first 9 digits of the CPF, generate the 2 digits and save in a new CPF.
 Compare if the CPF sent is the same as the CPF generated.
 If true, the CPF is valid, otherwise invalid.
@@ -16,7 +16,7 @@ If true, the CPF is valid, otherwise invalid.
 
 * Get second digit:
 --- Multiply the first 9 digits of the CPF, PLUS THE FIRST DIGIT, previously obtained by a countdown starting from 11 and ending in 2
---- Same logic as step 2 from the first digit onwardcpfContainer.
+--- Same logic as step 2 from the first digit onward.
 
 SAMPLE CPF: 113.314.390-35
 
