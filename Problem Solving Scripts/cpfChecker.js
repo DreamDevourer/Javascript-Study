@@ -109,6 +109,7 @@ function validateCPF(cpf) {
     var digitOne = 0;
 
     var valid = false;
+    var partiallyValid = false;
 
     // Sum each digit in cpf.
     sumAll = sum(cpfComplete);
@@ -117,6 +118,7 @@ function validateCPF(cpf) {
     if (sumAll[0] == sumAll[1]) {
         //valid = true;
         console.log("CPF partially valid.");
+        partiallyValid = true;
     }
 
     for (i = 0; i < 9; i++) {
@@ -146,7 +148,8 @@ function validateCPF(cpf) {
         valid = true;
         return false;
     }
-    if (!valid) {
+
+    if (!valid && partiallyValid == true) {
         return true;
     }
 }
