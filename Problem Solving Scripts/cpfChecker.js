@@ -87,6 +87,15 @@ function sum(arr) {
 
 
 /******************************************************************************
+    Function: logThis(<x>){
+    Params:
+    - str: String to output if debug is enabled.
+    Return: string
+******************************************************************************/
+function logThis(msg) { if (debugMode) { return console.log(msg); } }
+
+
+/******************************************************************************
     Function: validateCPF(<x>){
     Params:
     - n : value to be checked
@@ -113,11 +122,11 @@ function validateCPF(cpf) {
 
     // Sum each digit in cpf.
     sumAll = sum(cpfComplete);
-    //console.log(`Original: ${cpfComplete}\nSum of all digits: ${sumAll}`);
+    logThis(`Original: ${cpfComplete}\nSum of all digits: ${sumAll}`);
 
     if (sumAll[0] == sumAll[1]) {
         //valid = true;
-        console.log("CPF partially valid.");
+        logThis("CPF partially valid.");
         partiallyValid = true;
     }
 
