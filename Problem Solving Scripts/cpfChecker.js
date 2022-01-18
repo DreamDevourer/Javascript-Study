@@ -72,7 +72,8 @@ DIGITS SUM: 1 + 1 + 3 + 3 + 1 + 4 + 3 + 9 + 0 + 3 + 5 = 33 => Is valid.
     Desc: If true, then the CPF is valid.
 ******************************************************************************/
 
-debugMode = true;
+// WARNING: Disable in production!
+debugMode = false;
 
 if (debugMode) {
     cpfVal = "113.314.390-35";
